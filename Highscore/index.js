@@ -88,11 +88,6 @@ function gameBegins() {
     }
 }
 
-if (userChoice=== "y"){
-  gameBegins()
-  top3()
-}
-
 function top3(){
   beatenScore = userScore;
   beatenUser = username;
@@ -108,16 +103,17 @@ function top3(){
 
     } 
   }
-}
-
-console.clear()
-
-console.log('Top 3 Scorers are:')
-for (i=0;i<highScores.length; i++){
+  console.log('Top 3 Scorers are:')
+  for (i=0;i<highScores.length; i++){
   console.log(`${highScores[i].name} : ${highScores[i].score}`)
 }
 
+}
 
-
-
-    
+if (userChoice=== "y"){
+    console.clear();
+    gameBegins();
+    top3();
+    exit = readlineSync.question(chalk.bgBlack.bold.red(`Press any key to exit`));
+    console.clear();
+  }
