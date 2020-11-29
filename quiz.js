@@ -65,7 +65,7 @@ var five = {
   Answer: 'b'
 }
 
-listofQnA = [one, two, three, four, five];
+var listofQnA = [one, two, three, four, five];
 
 function gameBegins() {
   console.log(chalk.bold.white.bgRed(`Please choose the right option and press 'Enter'.`))
